@@ -1,52 +1,59 @@
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
+import { RiArrowRightUpLine } from 'react-icons/ri'
+import { Container } from '@nextui-org/react';
+
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-   
+    <Container>
+
       <main className={styles.main}>
-        <h1 className={styles.title}>
-           Welcome to Arbi Network
+        <div className={styles.title}>
+        <h1>
+          Scale Web3 & DEX<br />
+           on Arbitrum.
         </h1>
         <p className={styles.description
         }>
-         Build decentralization & Web3.0 Revolutionary with new experience
+         Build decentralization & Web3.0 Revolutionary with best services & experience.
         </p>
-
-        <div className={styles.connect}>
-        
         </div>
+      
 
         <div className={styles.grid}>
-          <a href="https://portal.thirdweb.com/" className={styles.card}>
-            <h2>Portal &rarr;</h2>
+          <a href="" className={styles.card}>
+           <div style={{display:'flex', justifyContent:'space-between'}}>
+            <h2 >Swap</h2>
+            <RiArrowRightUpLine />
+            </div>
             <p>
-              Guides, references and resources that will help you build with
-              thirdweb.
+              Swap token easily with ARBI. Gasless & Transparent transaction on Arbitrum.
             </p>
           </a>
 
-          <a href="https://thirdweb.com/dashboard" className={styles.card}>
-            <h2>Dashboard &rarr;</h2>
+          <a href="" className={styles.card}>
+           <div style={{display:'flex', justifyContent:'space-between'}}>
+            <h2 >Earn</h2>
+            <RiArrowRightUpLine />
+            </div>
             <p>
-              Deploy, configure and manage your smart contracts from the
-              dashboard.
+              Try earn with us for daily passive income e.g staking, pools, farming, and many more.
             </p>
           </a>
 
-          <a
-            href="https://portal.thirdweb.com/templates"
-            className={styles.card}
-          >
-            <h2>Templates &rarr;</h2>
+          <a href="" className={styles.card}>
+           <div style={{display:'flex', justifyContent:'space-between'}}>
+            <h2 >Origin Passport</h2>
+            <RiArrowRightUpLine />
+            </div>
             <p>
-              Discover and clone template projects showcasing thirdweb features.
+             Origin Passport, your ARBI identity early contributor to get exclusive benefit.
             </p>
           </a>
         </div>
       </main>
-    </div>
+    </Container>
   );
 };
 

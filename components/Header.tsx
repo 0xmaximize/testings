@@ -6,39 +6,45 @@ import { useRouter } from "next/router";
 
 const Header: NextPage = () => {
     const router = useRouter();
-
+ 
     return (
       <div className={styles.container}>
+        
         <div className={styles.menu}>
+        
         <Link href={"/"} legacyBehavior>
           <a className={router.pathname == "/" ? styles.active : styles.link}>
-          <p>Dashboard</p>
+          <h4>Dashboard</h4>
           </a>
         </Link>
         <Link href={"/Swap"} legacyBehavior>
-          <a className={router.pathname == "/c" ? styles.active : styles.link}>
-          <p>Swap</p>
+          <a className={router.pathname == "/Swap" ? styles.active : styles.link}>
+          <h4>Swap</h4>
           </a>
         </Link>
         <Link href={"/Earn"} legacyBehavior>
-          <a className={router.pathname == "/c" ? styles.active : styles.link}>
-          <p>Earn</p>
+          <a className={router.pathname == "/Earn" ? styles.active : styles.link}>
+          <h4>Earn</h4>
           </a>
         </Link>
         <Link href={"/Origin"} legacyBehavior>
-          <a className={router.pathname == "/c" ? styles.active : styles.link}>
-          <p>Origin Passport</p>
+          <a className={router.pathname == "/Origin" ? styles.active : styles.link}>
+          <h4>Origin Passport</h4>
           </a>
         </Link>
-        <Link href={"https://docs.arbi.network"} legacyBehavior>
+        <Link href={""} legacyBehavior>
           <a className={router.pathname == "" ? styles.active : styles.link}>
-          <p>Docs</p>
+          <h4>Docs</h4>
           </a>
         </Link>
           </div>
           
           <div>
-        <ConnectWallet className={styles.connect} /> 
+        <ConnectWallet 
+        btnTitle=""
+        modalTitle="Connect into ARBI Network"
+        style={{margin:'10px', color:'#000', borderRadius:'25px'}}
+        className='connect' /> 
         </div>
         </div>
       
