@@ -12,27 +12,27 @@ const Header: NextPage = () => {
         <div className={styles.menu}>
         <Link href={"/"} legacyBehavior>
           <a className={router.pathname == "/" ? styles.active : styles.link}>
-          <p></p>
+          <p>Dashboard</p>
           </a>
         </Link>
-        <Link href={"/c"} legacyBehavior>
+        <Link href={"/Swap"} legacyBehavior>
           <a className={router.pathname == "/c" ? styles.active : styles.link}>
           <p>Swap</p>
           </a>
         </Link>
-        <Link href={"/c"} legacyBehavior>
+        <Link href={"/Earn"} legacyBehavior>
           <a className={router.pathname == "/c" ? styles.active : styles.link}>
           <p>Pool</p>
           </a>
         </Link>
-        <Link href={"/c"} legacyBehavior>
+        <Link href={"/Origin"} legacyBehavior>
           <a className={router.pathname == "/c" ? styles.active : styles.link}>
           <p>Origin Passport</p>
           </a>
         </Link>
-        <Link href={"/c"} legacyBehavior>
+        <Link href={"/Earn"} legacyBehavior>
           <a className={router.pathname == "/c" ? styles.active : styles.link}>
-          <p>Inventory</p>
+          <p>Earn</p>
           </a>
         </Link>
           </div>

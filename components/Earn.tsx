@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 
-const Stake: NextPage = () => {
+const Earn: NextPage = () => {
   return (
     <div className={styles.container}>
    
@@ -10,7 +10,7 @@ const Stake: NextPage = () => {
           
         </h1>
         <p className={styles.description}>
-       Stake Section
+       Earn Section
         </p>
 
         <div className={styles.connect}>
@@ -23,4 +23,4 @@ const Stake: NextPage = () => {
   );
 };
 
-export default Stake;
+export default Earn;
