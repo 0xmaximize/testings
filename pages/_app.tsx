@@ -9,9 +9,8 @@ import "../styles/globals.css";
 // You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
 const activeChain = "mumbai";
 const darkTheme = createTheme({
-	type: 'dark',
+	type: 'light',
 });
-
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
