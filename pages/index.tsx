@@ -7,9 +7,10 @@ const Home: NextPage = () => {
    
       <main className={styles.main}>
         <h1 className={styles.title}>
-           Decentralized
+           Welcome to Arbi Network
         </h1>
-        <p className={styles.description}>
+        <p className={styles.description
+        }>
          Build decentralization & Web3.0 Revolutionary with new experience
         </p>
 

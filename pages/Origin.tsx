@@ -7,14 +7,14 @@ const Origin: NextPage = () => {
    
       <main className={styles.main}>
         <h1 className={styles.title}>
-           Origin NFT
+           Origin Passport
         </h1>
         <p className={styles.description}>
          Build decentralization & Web3.0 Revolutionary with new experience
         </p>
 
         <div className={styles.connect}>
-        
+          <h1>What is ORIGIN Passport</h1>        
         </div>
 
         

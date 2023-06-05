@@ -7,14 +7,12 @@
     height: 4.8vw;
     top: 0;
     background-color: rgba(30, 29, 37, 0.658);
-    padding:-1rem;
   }
 
 
 .menu{
   display: flex;
   align-items: flex-start;
-  position:'fixed';
   justify-content: flex-end;
   text-align: center;
   padding: 10px;

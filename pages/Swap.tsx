@@ -10,7 +10,7 @@ const Swap: NextPage = () => {
           
         </h1>
         <p className={styles.description}>
-       Swap Section
+       Swap SectioSn
         </p>
 
         <div className={styles.connect}>
