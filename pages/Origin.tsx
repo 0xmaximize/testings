@@ -14,7 +14,10 @@ const Origin: NextPage = () => {
         </p>
 
         <div className={styles.connect}>
-          <h1>What is ORIGIN Passport</h1>        
+          <div style={{display:'flex'}}>
+          <h4>What is ORIGIN Passport?</h4> 
+          <p>origin passport is a decentralization</p>    
+          </div>   
         </div>
 
         

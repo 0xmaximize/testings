@@ -22,7 +22,7 @@ const Header: NextPage = () => {
         </Link>
         <Link href={"/Earn"} legacyBehavior>
           <a className={router.pathname == "/c" ? styles.active : styles.link}>
-          <p>Pool</p>
+          <p>Earn</p>
           </a>
         </Link>
         <Link href={"/Origin"} legacyBehavior>
@@ -30,9 +30,9 @@ const Header: NextPage = () => {
           <p>Origin Passport</p>
           </a>
         </Link>
-        <Link href={"/Earn"} legacyBehavior>
-          <a className={router.pathname == "/c" ? styles.active : styles.link}>
-          <p>Earn</p>
+        <Link href={"https://docs.arbi.network"} legacyBehavior>
+          <a className={router.pathname == "" ? styles.active : styles.link}>
+          <p>Docs</p>
           </a>
         </Link>
           </div>
@@ -45,4 +45,4 @@ const Header: NextPage = () => {
     );
   };
   
-  export default Header;
+  export default Header;  
