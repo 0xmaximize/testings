@@ -22,6 +22,12 @@ import origin from "../public/Asset/Origin.png";
 import { BsCheckSquareFill } from 'react-icons/bs'
 import { FaEthereum } from 'react-icons/fa';
 import { FaUnlockAlt } from 'react-icons/fa';
+import thirdweb from "../public/Asset/thirdweb.svg";
+import arbitrum from "../public/Asset/arbitrum.svg";
+import arbi from "../public/Asset/arbi.svg";
+import arbilabs from "../public/Asset/arbilabs.svg";
+
+
 
 const Origin: NextPage = () => {
   
@@ -258,8 +264,8 @@ const Origin: NextPage = () => {
             </div>
             <div className={styles.infoSide}>
               {/* Title of your NFT Collection */}
-              <p  style={{opacity:'70%', fontWeight:'bold',fontSize:'20px'}}>
-                ARBI Official Collectibles
+              <p  style={{opacity:'80%', fontWeight:'bold',fontSize:'18px'}}>
+                ARBI Network | Origin Collectibles
                 </p>
               <h1>ARBI :  Origin Passport</h1>
               {/* Description of your NFT Collection */}
@@ -321,12 +327,18 @@ const Origin: NextPage = () => {
       </div>
       
             </div>
-
-
           </>
-    
       </div>
-   
+      <div style={{marginTop:'-8rem'}}>
+      <h4 style={{color:'#fff', marginBottom:'-15px', marginTop:'10px'}}>Powered by : </h4> 
+        <div className={styles.flex}>
+        <Image className={styles.imgs}  alt='nft' src={arbi} />
+        <Image className={styles.imgs}  alt='nft' src={thirdweb} />
+        <Image className={styles.imgs}  alt='nft' src={arbilabs} />
+        <Image className={styles.imgs}  alt='nft' src={arbitrum} />
+
+  </div>
+  </div> 
     </div>
   );
 };  

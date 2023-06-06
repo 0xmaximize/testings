@@ -18,23 +18,27 @@
   }
  
   .menu h4{
-    margin:20px
+    margin:20px;
+    
   }
 
   .link {
     font-size: 15px;
-    font-weight: bold;
+    font-weight: '';
     color: white;
+    opacity: 0.5;
+
     
   }
   
   .link:hover {
     align-items: center;
-    color: aqua;
+    color: white;
+    opacity: 1;
   }
 
   .active {
-    color: aqua;
+    color: white;
     font-size: 15px;
     font-weight: bold;
     align-items: center;
@@ -66,7 +70,7 @@
   }
   
     .menu{
-     display: none;
+     display: flex;
     }
     .connect{
       font-size: 10px;
