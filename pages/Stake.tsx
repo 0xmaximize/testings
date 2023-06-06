@@ -1,25 +1,20 @@
 import type { NextPage } from "next";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Stake.module.css";
+import Image from "next/image";
+import origin from '../public/Asset/Origin.png'
+import { Container, Text, Card, Button, Spacer } from "@nextui-org/react";
 
 const Stake: NextPage = () => {
   return (
-    <div className={styles.container}>
-   
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          
-        </h1>
-        <p className={styles.description}>
-       Stake Section
-        </p>
+  <Container>
+    <Text>
+    
+    </Text>
+    <Spacer y={0.5} />
 
-        <div className={styles.connect}>
-        
-        </div>
-
-        
-      </main>
-    </div>
+    <Button size="xs">Stake Now</Button>;
+    <Spacer y={0.5} />
+  </Container>
   );
 };
 

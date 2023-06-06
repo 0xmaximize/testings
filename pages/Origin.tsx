@@ -19,7 +19,7 @@ import { parseIneligibility } from "../utils/parseIneligibility";
 import { myNftDropContractAddress } from "../const/Details";
 import Image from "next/image";
 import origin from "../public/Asset/Origin.png";
-import { BsCheckSquareFill } from 'react-icons/bs'
+import { BsCheckSquareFill, BsFillPatchCheckFill } from 'react-icons/bs'
 import { FaEthereum } from 'react-icons/fa';
 import { FaUnlockAlt } from 'react-icons/fa';
 import thirdweb from "../public/Asset/thirdweb.svg";
@@ -264,8 +264,8 @@ const Origin: NextPage = () => {
             </div>
             <div className={styles.infoSide}>
               {/* Title of your NFT Collection */}
-              <p  style={{opacity:'80%', fontWeight:'bold',fontSize:'18px'}}>
-                ARBI Network | Origin Collectibles
+              <p  style={{color:'#fff', fontWeight:'bold',fontSize:'18px'}}>
+                ARBI NFTs <BsFillPatchCheckFill color='#05aff7' style={{marginLeft:'3px', marginBottom:'-2px'}}/> 
                 </p>
               <h1>ARBI :  Origin Passport</h1>
               {/* Description of your NFT Collection */}
