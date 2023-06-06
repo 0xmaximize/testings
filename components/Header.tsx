@@ -43,7 +43,7 @@ const Header: NextPage = () => {
         <ConnectWallet 
         btnTitle=""
         modalTitle="Connect into ARBI Network"
-        style={{margin:'10px', color:'#000', borderRadius:'25px'}}
+        style={{margin:'13px', color:'#000', borderRadius:'10px'}}
         className='connect' /> 
         </div>
         </div>
