@@ -17,13 +17,13 @@ const Header: NextPage = () => {
           <h4>Dashboard</h4>
           </a>
         </Link>
-        <Link href={"/Swap"} legacyBehavior>
-          <a className={router.pathname == "/Swap" ? styles.active : styles.link}>
+        <Link href={""} legacyBehavior>
+          <a className={router.pathname == "" ? styles.active : styles.link}>
           <h4>Swap</h4>
           </a>
         </Link>
-        <Link href={"/Earn"} legacyBehavior>
-          <a className={router.pathname == "/Earn" ? styles.active : styles.link}>
+        <Link href={""} legacyBehavior>
+          <a className={router.pathname == "" ? styles.active : styles.link}>
           <h4>Earn</h4>
           </a>
         </Link>
