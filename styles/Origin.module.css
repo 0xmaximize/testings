@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-
 }
 
 .grid {
@@ -13,23 +12,6 @@
   margin-bottom:1rem;
 }
 
-
-.icons {
-  display: flex;
-  justify-content: flex-start;
-  width: 50%;
-  height: 50%;
-  margin:10px;
-  
-}
-
-.previewImage {
-  width:300px; 
-  height: 300px;
-  border-radius: 16px;
-  border: 1px solid var(--border-color);
-  padding: 8px;
-}
 
 .mintInfoContainer {
   display: flex;
@@ -46,7 +28,7 @@
 }
 
 .infoSide {
-  margin-top: -2rem;
+  margin-top: -4rem;
   width: 30%;
   text-align: start;
 }
@@ -56,7 +38,8 @@
   color: #fdfdfd;
 }
 .infoSide p{
-  color: #ffffffc9;
+  color: #fff;
+  opacity: 1;
 }
 
 
@@ -65,9 +48,6 @@
   width: 100%;
 }
 
-.label{
-  background: #e90707
-}
 
 .imageSide {
   width: 25%;
@@ -184,82 +164,80 @@
   align-items: center;
   justify-content: center;
   gap: 15%;
+  margin-bottom: -5rem;
   margin-left: 20px;
   margin-top: 24px;
 }
 
-.quantityControlButton {
-  cursor: pointer;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  font-size: 2rem;
-  background-color: transparent;
-  border: 1px solid grey;
-  color: #fff;
+.powered{
+  margin-top: -11rem;
+  padding: 4rem;
 }
 
-.quantityControlButton:disabled {
-  opacity: 0.25;
+.prices{
+  display:flex;
+  justify-content : space-between;
+  margin-bottom:2px;
+  margin-top:25px;
 }
 
-.timer {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  margin-top: -40px;
-}
+@media only screen and (max-width: 800px) {
 
-.timerItem {
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-}
-
-.timerValue {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.timerLabel {
-  font-size: 1rem;
-  opacity: 0.75;
-  margin-top: -20px;
-}
-
-/* On mobile, make the .mintInfoContainer stack vertically */
-@media screen and (max-width: 850px) {
-
-  .infoSide {
-
-    margin-top: 0rem;
+  .container {
+    min-height: 100vh;
   }
-
   
-  .mintInfoContainer {
-    flex-direction: column;
-    margin-bottom: 10rem;
+.mintInfoContainer {
+  display: grid;
+  width: auto;
   }
 
   .infoSide {
-    width: 100%;
-    
+    margin-top: 6rem;
+    display: grid;
+  }
+  
+
+  .mintContainer {
+    justify-content: center;
+    gap: 5%;
+   
   }
 
-  .mintButton {
-    max-width: 100% !important;
-    margin-bottom: 10rem;
+  .flex {
+    display: grid;
+    gap: 0%;
   }
 
+  .image {
+    max-width: 70%;
+    height: 100%;
+    padding: 20px;
+    justify-content: center;
+  }
+  
   .imageSide {
-    width: 100%;
+    display: none;
   }
-}
 
-.footer{
-  margin-top: 10rem;
+  .imageWidth{
   width: 100%;
-  padding: 1px;
+  height: 100%;
+  margin-left: 24px;
+  }
+
+
+  .prices{
+    display:flex;
+    justify-content : space-between;
+    margin-bottom:2px;
+    margin-top:1rem;
+  }
+
+  .powered{
+    margin-top: 3rem;
+    justify-content: center;
+    text-align: center;
+  }
+  
 }

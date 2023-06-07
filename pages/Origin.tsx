@@ -26,7 +26,7 @@ import thirdweb from "../public/Asset/thirdweb.svg";
 import arbitrum from "../public/Asset/arbitrum.svg";
 import arbi from "../public/Asset/arbi.svg";
 import arbilabs from "../public/Asset/arbilabs.svg";
-
+import { Container } from "@nextui-org/react";
 
 
 const Origin: NextPage = () => {
@@ -217,9 +217,8 @@ const Origin: NextPage = () => {
   ]);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.mintInfoContainer}>
-        
+    <Container> 
+      <div className={styles.mintInfoContainer}>       
           <>
           <div className={styles.imageSide}>
               {/* Image Preview of NFTs */}
@@ -274,11 +273,20 @@ const Origin: NextPage = () => {
                 Origin Passport can be staked with ARBI & Unlocked the OG roles.
               </p>
               </div>
-              <div style={{display:'flex', justifyContent:'space-between', marginBottom:'2px', marginTop:'25px'}}>
-               
-              <p >
-              <FaEthereum size='15' color='#fff'style={{margin:'-2px', marginRight:'4px'}}/>   
-              Fees : <span style={{fontWeight:'bold'}}>0.0004</span>
+              <div className={styles.imageWidth}>
+              {/* Image Preview of NFTs */}
+              <Image   className={styles.image}  alt='nft' src={origin}
+/>
+              </div>
+              <div className={styles.prices}>
+              <p>
+              <FaEthereum 
+              size='15' 
+              color='#fff'
+              style={{
+                margin:'-2px', 
+                marginRight:'4px'}}/>   
+              Fees : <span style={{fontWeight:'bold'}}>FREE</span>
               </p>
            
               <p>
@@ -329,7 +337,7 @@ const Origin: NextPage = () => {
             </div>
           </>
       </div>
-      <div style={{marginTop:'-8rem'}}>
+      <div className={styles.powered}>
       <h4 style={{color:'#fff', marginBottom:'-15px', marginTop:'10px'}}>Powered by : </h4> 
         <div className={styles.flex}>
         <Image className={styles.imgs}  alt='nft' src={arbi} />
@@ -339,7 +347,7 @@ const Origin: NextPage = () => {
 
   </div>
   </div> 
-    </div>
+  </Container>
   );
 };  
 
