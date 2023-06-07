@@ -44,7 +44,7 @@ const Home: NextPage = () => {
             </div>
 
             <p>
-              Try earn with us for daily passive income e.g staking, pools, farming, and many more.
+              Users can earn passive income on our ecosystem by staking, pool, etc.
             </p>
             <Spacer y={1}/>
             <Button size="sm">Earn</Button>
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
             <RiArrowRightUpLine />
             </div>
             <p>
-             Origin Passport, your ARBI identity early contributor to get exclusive benefit.
+             The identity of ARBI users early contributor, can get more benefits.
             </p>
             <Spacer y={1}/>
             <Button size="sm">Origin Passport</Button>

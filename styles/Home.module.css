@@ -100,8 +100,9 @@
 }
 
 .card p {
-  margin: 0;
+
   color:#fff;
+  letter-spacing: 0.5px;
   font-size: 1rem;
   line-height: 1.5;
 }

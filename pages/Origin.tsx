@@ -26,7 +26,7 @@ import thirdweb from "../public/Asset/thirdweb.svg";
 import arbitrum from "../public/Asset/arbitrum.svg";
 import arbi from "../public/Asset/arbi.svg";
 import arbilabs from "../public/Asset/arbilabs.svg";
-import { Container } from "@nextui-org/react";
+import { Container, Button } from "@nextui-org/react";
 
 
 const Origin: NextPage = () => {
@@ -281,7 +281,7 @@ const Origin: NextPage = () => {
               <div className={styles.prices}>
               <p>
               <BsCheckSquareFill size='15' color='#fff' style={{margin:'-2px', marginRight:'4px'}}/>
-               Collected : <span style={{fontWeight:'bold'}}>2 / 4000</span>
+               Collected : <span style={{fontWeight:'bold'}}>2 / 4999</span>
                 </p>
               
                 <p style={{marginLeft:'2rem'}}>
@@ -294,34 +294,15 @@ const Origin: NextPage = () => {
          <div className={styles.mintContainer}>
                     {isSoldOut ? (
                       <div>
-                        <p>Fetching Data . . . </p>
+                     <Button disabled size='md' >Mint Origin</Button>
                       </div>
                     ) : (
-                      <Web3Button
-                        contractAddress={nftDrop?.getAddress() || ""}
-                        action={(cntr) => cntr.erc721.claim(quantity)}
-                        isDisabled={!canClaim || buttonLoading}
-                        onError={(err) => {
-                          console.error(err);
-                          alert("Error! insufficient balance...");
-                        }}
-                        onSuccess={() => {
-                          setQuantity(1);
-                          alert("Successfully claimed NFTs");
-                        }}
-                      >
-                      Mint Origin                     
-                      </Web3Button>
+                      <Button size='md'>Mint Origin</Button>
                       
                     )}
-                    <Web3Button contractAddress={nftDrop?.getAddress() || ""}
-                        action={(cntr) => cntr.erc721.claim('')}
-                        isDisabled={!canClaim || buttonLoading}
-                      
-                       >Invites</Web3Button>
+                         <Button bordered color='warning' size='md' auto>Invite User</Button>
                   </div>
                   
- 
       </div>
       
             </div>

@@ -3,13 +3,21 @@ import { NextPage } from "next";
 import Link from "next/link";
 import styles from '../styles/Header.module.css'
 import { useRouter } from "next/router";
+import Image from "next/image";
+import Logo from '../public/Asset/arbi.svg';
 
 const Header: NextPage = () => {
     const router = useRouter();
  
     return (
       <div className={styles.container}>
-        
+           <Link href={"/"} legacyBehavior>
+        <Image 
+        src={Logo}
+        alt='logo'
+        width={200}
+      />
+      </Link>
         <div className={styles.menu}>
         
         <Link href={"/"} legacyBehavior>
