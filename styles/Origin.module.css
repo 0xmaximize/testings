@@ -29,7 +29,7 @@
 
 .infoSide {
   margin-top: -4rem;
-  width: 30%;
+  width: 35%;
   text-align: start;
 }
 
@@ -41,7 +41,6 @@
   color: #fff;
   opacity: 1;
 }
-
 
 .description {
   font-size: 1rem;
@@ -226,6 +225,7 @@
   }
 
   .imageWidth{
+    display: block;
   width: 100%;
   height: 100%;
   margin-left: 24px;
