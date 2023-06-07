@@ -175,7 +175,7 @@
 
 .prices{
   display:flex;
-  justify-content : space-between;
+  padding:1rem;
   margin-bottom:2px;
   margin-top:25px;
 }
@@ -234,7 +234,7 @@
 
   .prices{
     display:flex;
-    justify-content : space-between;
+    justify-content : space-around;
     margin-bottom:2px;
     margin-top:1rem;
   }

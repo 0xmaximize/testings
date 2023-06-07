@@ -280,21 +280,11 @@ const Origin: NextPage = () => {
               </div>
               <div className={styles.prices}>
               <p>
-              <FaEthereum 
-              size='15' 
-              color='#fff'
-              style={{
-                margin:'-2px', 
-                marginRight:'4px'}}/>   
-              Fees : <span style={{fontWeight:'bold'}}>FREE</span>
-              </p>
-           
-              <p>
               <BsCheckSquareFill size='15' color='#fff' style={{margin:'-2px', marginRight:'4px'}}/>
                Collected : <span style={{fontWeight:'bold'}}>2 / 4000</span>
                 </p>
               
-                <p>
+                <p style={{marginLeft:'2rem'}}>
               <FaUnlockAlt size='15' color='#fff' style={{margin:'-2px', marginRight:'4px'}}/>   
              Unlocked : <span style={{fontWeight:'bold'}}>OG</span>
               </p>
