@@ -25,7 +25,7 @@ const Home: NextPage = () => {
    
 
         <div className={styles.grid}>
-          <Link href="/" className={styles.card}>
+          <Link href="/Swap" className={styles.card}>
            <div style={{display:'flex', justifyContent:'space-between'}}>
             <h2>Swap</h2>
             <RiArrowRightUpLine />
@@ -62,25 +62,24 @@ const Home: NextPage = () => {
             <Button size="sm">Origin Passport</Button>
           </Link>
         </div>
-        <div style={{display:'flex', marginTop:'15px'}}>
+        <div style={{display:'flex', marginTop:'25px'}}>
         
-          <BsDiscord size='25' color='#fff' style={{margin:'15px'}}/>
+      
+        <BsDiscord size='25' color='#fff' style={{margin:'25px'}}/>
           <Link href="https://twitter.com/arbinetwork" target="_blank">
-            <BsTwitter size='25' color='#fff' style={{margin:'15px'}}/>
+            <BsTwitter size='25' color='#fff' style={{margin:'25px'}}/>
             </Link>
             <Link href="https://opensea.com" target="_blank">
-            <SiOpensea size='25' color='#fff' style={{margin:'15px'}}/>
+            <SiOpensea size='25' color='#fff' style={{margin:'25px'}}/>
             </Link>
             <Link href="https://medium.com/@arbinetwork" target="_blank">
-          <BsMedium size='25' color='#fff' style={{margin:'15px'}}/>
+          <BsMedium size='25' color='#fff' style={{margin:'25px'}}/>
           </Link>
           <Link href="https://t.me/arbichannel" target="_blank">
-          <FaTelegramPlane size='25' color='#fff' style={{margin:'15px'}}/>
+          <FaTelegramPlane size='25' color='#fff' style={{margin:'25px'}}/>
           </Link>
         </div>
-        <Container>
-  
-        </Container>
+     
       </main>
     </Container>
   );
