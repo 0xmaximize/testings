@@ -25,8 +25,8 @@ const Header: NextPage = () => {
           <h4>Dashboard</h4>
           </a>
         </Link>
-        <Link href={"/Swap"} legacyBehavior>
-          <a className={router.pathname == "/Swap" ? styles.active : styles.link}>
+        <Link href={"/swap"} legacyBehavior>
+          <a className={router.pathname == "/swap" ? styles.active : styles.link}>
           <h4>Swap</h4>
           </a>
         </Link>
@@ -35,8 +35,8 @@ const Header: NextPage = () => {
           <h4>Earn</h4>
           </a>
         </Link>
-        <Link href={"/Origin"} legacyBehavior>
-          <a className={router.pathname == "/Origin" ? styles.active : styles.link}>
+        <Link href={"/origin"} legacyBehavior>
+          <a className={router.pathname == "/origin" ? styles.active : styles.link}>
           <h4>Origin Passport</h4>
           </a>
         </Link>

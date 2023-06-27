@@ -19,8 +19,7 @@ import { parseIneligibility } from "../utils/parseIneligibility";
 import { myNftDropContractAddress } from "../const/Details";
 import Image from "next/image";
 import origin from "../public/Asset/Origin.png";
-import { BsCheckSquareFill, BsFillPatchCheckFill } from 'react-icons/bs'
-import { FaEthereum } from 'react-icons/fa';
+import { BsCheckCircleFill, BsFillPatchCheckFill, BsFillInfoCircleFill } from 'react-icons/bs'
 import { FaUnlockAlt } from 'react-icons/fa';
 import thirdweb from "../public/Asset/thirdweb.svg";
 import arbitrum from "../public/Asset/arbitrum.svg";
@@ -184,18 +183,16 @@ const Origin: NextPage = () => {
     () => isLoading || claimIneligibilityReasons.isLoading,
     [claimIneligibilityReasons.isLoading, isLoading]
   );
+ 
   const buttonText = useMemo(() => {
     if (isSoldOut) {
-      return "Load NFT dataLoad NFT data ";
+      return "Sold Out";
     }
-
     if (canClaim) {
       const pricePerToken = BigNumber.from(
         activeClaimCondition.data?.currencyMetadata.value || 0
       );
-     
-
-      return `Congratulations, you are eligible! `;
+      return `Eligible `;
 
     }
     if (claimIneligibilityReasons.data?.length) {
@@ -205,7 +202,6 @@ const Origin: NextPage = () => {
       return "Checking eligibility...";
     }
     
-    return "You are not eligible";
   }, [
     isSoldOut,
     canClaim,
@@ -247,22 +243,20 @@ const Origin: NextPage = () => {
               ) ? (
                 <div>
                  <h4 style={{textAlign:'center'}}>
-                  Minting has not started yet. 
                 </h4>
-                <p style={{textAlign:'center'}}>AIPUPPY can be minted on :</p>
-                <h2 style={{textAlign:'center'}}>2023.05.20 8:00 (UTC+0)</h2>
                 </div>
               ) : !activeClaimCondition.data && claimConditions.data ? (
                 <div>
-                   <p style={{textAlign:'center'}}>Fetching NFT . . . </p>
+                   <p style={{textAlign:'center'}}></p>
                 </div>
               ) : (
                 <>
                 </>
               )}
             </div>
-            <div className={styles.infoSide}>
-              {/* Title of your NFT Collection */}
+            
+            <div className={styles.infoSide}>              
+              {/* Title of your NFT Collection */}              
               <p  style={{color:'#fff', fontWeight:'bold',fontSize:'18px'}}>
                 ARBI NFTs <BsFillPatchCheckFill color='#05aff7' style={{marginLeft:'3px', marginBottom:'-2px'}}/> 
                 </p>
@@ -280,15 +274,22 @@ const Origin: NextPage = () => {
               </div>
               <div className={styles.prices}>
               <p>
-              <BsCheckSquareFill size='15' color='#fff' style={{margin:'-2px', marginRight:'4px'}}/>
-               Collected : <span style={{fontWeight:'bold'}}>2 / 4999</span>
-                </p>
-              
-                <p style={{marginLeft:'2rem'}}>
+              <BsCheckCircleFill size='15' color='#fff' style={{margin:'-2px', marginRight:'4px'}}/>
+               Collected : <span style={{fontWeight:'bold'}}>{numberClaimed} /{4999}</span>
+                </p>             
+              <p style={{marginLeft:'1.2rem'}}>
               <FaUnlockAlt size='15' color='#fff' style={{margin:'-2px', marginRight:'4px'}}/>   
-             Unlocked : <span style={{fontWeight:'bold'}}>OG</span>
+             Unlocked :   
+           <span style={{marginLeft:'2px', fontWeight:'bold'}}>OG</span>                    
+              </p>
+
+              <p style={{marginLeft:'1rem'}}>
+              <BsFillInfoCircleFill size='15' color='#fff' style={{margin:'-2px', marginRight:'4px'}}/>   
+            Status :   
+           <span style={{marginLeft:'2px', fontWeight:'bold'}}>{buttonLoading ? "Not connected" : buttonText}</span>                  
               </p>
                 </div>
+                
              <div className={styles.grid}>
 
          <div className={styles.mintContainer}>
@@ -297,15 +298,31 @@ const Origin: NextPage = () => {
                      <Button disabled size='md' >Mint Origin</Button>
                       </div>
                     ) : (
-                      <Button size='md'>Mint Origin</Button>
-                      
+                      <Web3Button
+                          contractAddress={nftDrop?.getAddress() || ""}
+                          action={(cntr) => cntr.erc721.claim(quantity)}
+                          isDisabled={!canClaim || buttonLoading}
+                          onError={(err) => {
+                            console.error(err);
+                            alert("Error! try again later...");
+                          }}
+                          onSuccess={() => {
+                            setQuantity(1);
+                            alert("Successfully mint Origin Passport");
+                          }}
+                        >
+                        Mint Origin                   
+                        </Web3Button>
+                        
                     )}
-                         <Button bordered color='warning' size='md' auto>Invite User</Button>
+                     
+                    
                   </div>
                   
       </div>
       
             </div>
+            
           </>
       </div>
       <div className={styles.powered}>

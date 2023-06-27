@@ -188,7 +188,7 @@
 @media only screen and (max-width: 800px) {
 
   .container {
-    min-height: 100vh;
+    min-height: auto;
   }
   
 .mintInfoContainer {
@@ -197,8 +197,11 @@
   }
 
   .infoSide {
-    margin-top: 6rem;
+    margin-top: 7rem;
     display: grid;
+    width: auto;
+    height: auto;
+    justify-content: center;
   }
   
 
@@ -234,7 +237,7 @@
 
   .prices{
     display:flex;
-    justify-content : space-around;
+    justify-content : space-between;
     margin-bottom:2px;
     margin-top:1rem;
   }
