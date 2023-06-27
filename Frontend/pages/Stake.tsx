@@ -12,7 +12,6 @@ const Stake: NextPage = () => {
     </Text>
     <Spacer y={0.5} />
 
-    <Button size="xs">Stake Now</Button>;
     <Spacer y={0.5} />
   </Container>
   );
