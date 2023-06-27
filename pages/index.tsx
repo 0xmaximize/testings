@@ -50,7 +50,7 @@ const Home: NextPage = () => {
             <Button size="sm">Earn</Button>
           </Link>
 
-          <Link href="/Origin" className={styles.card}>
+          <Link href="/origin" className={styles.card}>
            <div style={{display:'flex', justifyContent:'space-between'}}>
             <h2 >Origin Passport</h2>
             <RiArrowRightUpLine />
