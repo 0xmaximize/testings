@@ -64,12 +64,13 @@ const Home: NextPage = () => {
         </div>
         <div style={{display:'flex', marginTop:'25px'}}>
         
-      
+        <Link href="https://discord.gg/eubQyHyu" target="_blank">
         <BsDiscord size='25' color='#fff' style={{margin:'25px'}}/>
+        </Link>
           <Link href="https://twitter.com/arbinetwork" target="_blank">
             <BsTwitter size='25' color='#fff' style={{margin:'25px'}}/>
             </Link>
-            <Link href="https://opensea.com" target="_blank">
+            <Link href="https://opensea.io/collection/arbi-origin-passport" target="_blank">
             <SiOpensea size='25' color='#fff' style={{margin:'25px'}}/>
             </Link>
             <Link href="https://medium.com/@arbinetwork" target="_blank">

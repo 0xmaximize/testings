@@ -304,7 +304,7 @@ const Origin: NextPage = () => {
                           isDisabled={!canClaim || buttonLoading}
                           onError={(err) => {
                             console.error(err);
-                            alert("Error! try again later...");
+                            alert("Failed! not enough ETH amount");
                           }}
                           onSuccess={() => {
                             setQuantity(1);
