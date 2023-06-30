@@ -19,7 +19,8 @@ import { useMemo, useState, useEffect } from "react";
 
 const Airdrop: NextPage = () => {
   const contractAddress = "0xE8bed4308609f0848a3ef897008714B654F45f1b";
-  const { contract:tokenContract } = useContract(contractAddress);
+  const { contract:tokenContract } = useContract(contractAddress, "token-drop");
+  const [quantity, setQuantity] = useState(10000);
   const { data: contractTokenBalance , refetch: refetchContractTokenBalance , isLoading: loadingContractTokenBalance } = useContractRead(tokenContract, "tokenBalance");
   const { data: tokenBalance} = useBalance("0xE8bed4308609f0848a3ef897008714B654F45f1b");
   const formattedBalance = contractTokenBalance
@@ -105,14 +106,7 @@ const Airdrop: NextPage = () => {
               onSuccess={() => {
                 alert("Succesfully claimed! the airdrop has landed into your wallet.");
               }}
-              action={() =>
-                 claimToken({
-                   to: address, // Use useAddress hook to get current wallet address
-                   amount: 10000, // Amount of token to claim
-    
-
-                 })
-               }
+              action={(contract) => contract.erc20.claim(10000)}
              >           
                         Claim Airdrop                
                         </Web3Button>
