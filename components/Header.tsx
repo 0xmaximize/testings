@@ -30,9 +30,9 @@ const Header: NextPage = () => {
           <h4>Swap</h4>
           </a>
         </Link>
-        <Link href={""} legacyBehavior>
-          <a className={router.pathname == "" ? styles.active : styles.link}>
-          <h4>Earn</h4>
+        <Link href={"/airdrop"} legacyBehavior>
+          <a className={router.pathname == "/airdrop" ? styles.active : styles.link}>
+          <h4>Airdrop</h4>
           </a>
         </Link>
         <Link href={"/origin"} legacyBehavior>

@@ -37,14 +37,14 @@ const Home: NextPage = () => {
             <Button size="sm">Swap</Button>
           </Link>
 
-          <Link href="/" className={styles.card}>
+          <Link href="/airdrop" className={styles.card}>
            <div style={{display:'flex', justifyContent:'space-between'}}>
-            <h2 >Earn</h2>
+            <h2 >Airdrop</h2>
             <RiArrowRightUpLine />
             </div>
 
             <p>
-              Users can earn passive income on our ecosystem by staking, pool, etc.
+             ARBI Airdrop Program is landing. Claim your wARBI Airdrop now.
             </p>
             <Spacer y={1}/>
             <Button size="sm">Earn</Button>
