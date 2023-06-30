@@ -85,7 +85,7 @@ const Airdrop: NextPage = () => {
          <Spacer y={0.5} />
         <Container>
           <p style={{fontSize:'14px', letterSpacing:'0.4px'}}>
-            Having a Origin Passport holders / OG roles allows the holder to earn more ARBI & WARBI than others.
+            Having an Origin Passport / OG roles allows the holder to earn more ARBI & WARBI than others.
           </p>
         </Container>
     
