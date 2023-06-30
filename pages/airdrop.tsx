@@ -17,7 +17,7 @@ import {
 import { useMemo, useState, useEffect } from "react";
 
 
-const Earn: NextPage = () => {
+const Airdrop: NextPage = () => {
   const contractAddress = "0xE8bed4308609f0848a3ef897008714B654F45f1b";
   const { contract:tokenContract } = useContract(contractAddress);
   const { data: contractTokenBalance , refetch: refetchContractTokenBalance , isLoading: loadingContractTokenBalance } = useContractRead(tokenContract, "tokenBalance");
@@ -109,7 +109,7 @@ const Earn: NextPage = () => {
                  claimToken({
                    to: address, // Use useAddress hook to get current wallet address
                    amount: 10000, // Amount of token to claim
-                   checkERC20Allowance: false, // Set to true if you want to check ERC20 allowance
+    
 
                  })
                }
@@ -128,4 +128,4 @@ const Earn: NextPage = () => {
 );
 };
 
-export default Earn;
+export default Airdrop;
