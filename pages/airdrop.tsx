@@ -19,7 +19,7 @@ import { useMemo, useState, useEffect } from "react";
 
 const Airdrop: NextPage = () => {
   const contractAddress = "0xE8bed4308609f0848a3ef897008714B654F45f1b";
-  const { contract:tokenContract } = useContract(contractAddress, "token-drop");
+  const { contract:tokenContract } = useContract(contractAddress);
   const [quantity, setQuantity] = useState(10000);
   const { data: contractTokenBalance , refetch: refetchContractTokenBalance , isLoading: loadingContractTokenBalance } = useContractRead(tokenContract, "tokenBalance");
   const { data: tokenBalance} = useBalance("0xE8bed4308609f0848a3ef897008714B654F45f1b");
