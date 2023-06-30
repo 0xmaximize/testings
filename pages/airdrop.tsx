@@ -15,7 +15,7 @@ import {
   useBalance,
 } from "@thirdweb-dev/react";
 import { useMemo, useState, useEffect } from "react";
-import { TodoWrapper } from "../components/TodoWrapper";
+
 
 const Earn: NextPage = () => {
   const contractAddress = "0xE8bed4308609f0848a3ef897008714B654F45f1b";
@@ -64,7 +64,7 @@ const Earn: NextPage = () => {
           </div>
          </div>
          </Link>
-         <TodoWrapper />
+         
          <Link href={"https://discord.gg/A6qSJEbsbP"} target='_blank'>
 
          <div className={styles.cards}>
@@ -80,7 +80,7 @@ const Earn: NextPage = () => {
      
          </div>
          </Link>
-         <TodoWrapper />
+      
          <Spacer y={0.5} />
         <Container>
           <p style={{fontSize:'14px', letterSpacing:'0.4px'}}>
