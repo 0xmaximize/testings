@@ -47,7 +47,7 @@ const Home: NextPage = () => {
              ARBI Airdrop Program is landing. Claim your wARBI Airdrop now.
             </p>
             <Spacer y={1}/>
-            <Button size="sm">Earn</Button>
+            <Button size="sm">Airdrop</Button>
           </Link>
 
           <Link href="/origin" className={styles.card}>
