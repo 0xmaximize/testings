@@ -106,11 +106,27 @@
   }
   
   .button{
-    width: 380px !important; 
-    margin: 1rem;
+    width: 20% !important; 
     height: 100%;
-
     align-items: center;
+  }
+
+  .labell{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .labell p{
+    font-size: 10px;
+    letter-spacing: 0.6px;
+    font-weight: 400;
+    margin: 2px;
+  }
+  .span{
+    background-color: red;
+    padding: 4px;
+    border-radius: 7px;
+    margin-top: -10px;
+    z-index: 1;
   }
   @media only screen and (max-width: 600px) {
     .container {
@@ -134,7 +150,8 @@
         font-size: 8px;
       }
     .button{
-        width: auto !important; 
+        width: auto ;
+        margin: '20px'; 
     }
 
     }

@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import styles from "../styles/Airdrop.module.css";
-import { Container, Button, Spacer } from "@nextui-org/react";
+import { Container, Grid, Button, Spacer, Tooltip } from "@nextui-org/react";
 import Link from "next/link";
 import { BsTwitter,BsDiscord } from "react-icons/bs";
 import { RiArrowRightLine } from 'react-icons/ri';
@@ -15,6 +15,7 @@ import {
   useBalance,
 } from "@thirdweb-dev/react";
 import { useMemo, useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 
 const Airdrop: NextPage = () => {
@@ -35,8 +36,14 @@ const Airdrop: NextPage = () => {
 
   const { mutateAsync: claimToken, isLoading, error } = useClaimToken(tokenContract);
   const address = useAddress();
-
- 
+  const link = 'https://arbi.network/airdrop/'
+  const share = useRouter();
+  const base = `https://arbi.network/airdrop#${address}`;
+  const links = base ;
+  const copylink = (e: React.ChangeEvent<any>) => {
+      navigator.clipboard.writeText(links)
+  }
+  
   return (
       <Container>
       <main className={styles.main}>
@@ -80,8 +87,7 @@ const Airdrop: NextPage = () => {
           </div>
      
          </div>
-         </Link>
-      
+         </Link>     
          <Spacer y={0.5} />
         <Container>
           <p style={{fontSize:'14px', letterSpacing:'0.4px'}}>
@@ -95,25 +101,44 @@ const Airdrop: NextPage = () => {
       Claimed : {tokenBalance?.displayValue} wARBI</p>
       </div>
       <Spacer y={0.1} />
-      <Container style={{display:'flex', justifyContent:'center'}}>
+      
+      <Grid.Container gap={0.2} justify="center">
+        <Grid xs={7} md={6} lg={6}> 
+        <div className={styles.button}>  
       <Web3Button   
                contractAddress={contractAddress}
-               
                onError={(err) => {
                 console.error(err);
-                alert("Failed! Something went wrong, please try again later..");
+                alert("⛔ Something went wrong, please try again later ⛔");
               }}
               onSuccess={() => {
-                alert("Succesfully claimed! the airdrop has landed into your wallet.");
+                alert("Succesfully claimed 🥳 the airdrop has landed into your wallet");
               }}
               action={(contract) => contract.erc20.claim(10000)}
-             >           
-                        Claim Airdrop                
+             >      
+           
+                        Claim                 
                         </Web3Button>
-      <Spacer y={0.5}/>
-      <Button auto> Invites Friends</Button>
-   
-      </Container>
+                        </div>
+                        </Grid>  
+                      
+                        <Grid xs={4}>   
+                        
+      <Tooltip hideArrow trigger="click" content="Link Copied 🥳" color="success" placement="topEnd">
+        <Button auto color="primary" onClick={copylink}>
+        Invites Friends
+        </Button>
+        <br />
+        </Tooltip>
+      </Grid>  
+
+      </Grid.Container>
+      <div className={styles.labell}>
+        <span className={styles.span}>
+      <p> GET 10% BONUS</p>
+      </span>
+      </div>
+
         </div>
       </main>
    
