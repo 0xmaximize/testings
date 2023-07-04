@@ -286,7 +286,7 @@ const Origin: NextPage = () => {
               <p style={{marginLeft:'1rem'}}>
               <BsCheckCircleFill size='15' color='#fff' style={{margin:'-2px', marginRight:'4px'}}/>   
             Status :   
-           <span style={{marginLeft:'2px', fontWeight:'bold'}}>{buttonLoading ? "waiting approval" : buttonText}</span>                  
+           <span style={{marginLeft:'2px', fontWeight:'bold'}}>{buttonLoading ? "waiting approval..." : buttonText}</span>                  
               </p>
                 </div>
                 <p style={{fontSize:'14px', marginLeft:'1rem'}}><FaGasPump style={{marginBottom:'-2px', marginRight:'6px', letterSpacing:'0.5px'}}/> 

@@ -21,7 +21,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <title>{ TITLE }</title>
     </Helmet>
     <ThirdwebProvider activeChain={activeChain}>
-   
      <NextUIProvider theme={darkTheme}>
       <Header />
       <Component {...pageProps} />
