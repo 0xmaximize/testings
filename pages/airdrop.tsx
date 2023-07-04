@@ -140,10 +140,7 @@ const Airdrop: NextPage = () => {
       <p> GET 10% BONUS</p>
       </span>
       </div>
-      <Container>
-      <p style={{fontSize:'11px', letterSpacing:'0.3px', color:'#fff', marginTop:'15px', textAlign:'center'}}>       
-      If you get an error, try using a temporary VPN to claiming the airdrop.         </p>
-          </Container>
+    
         </div>
        
       </main>
