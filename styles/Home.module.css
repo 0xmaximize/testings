@@ -20,9 +20,9 @@
 
 .title h1{
   margin-top: 50px;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 80px;
-  letter-spacing: -2px;
+  letter-spacing: 2px;
   text-decoration: none;
   background: 
   -webkit-linear-gradient(135deg,hsla(210, 93%, 45%, 0.295) 56%,#a9d9ecfb 78%),

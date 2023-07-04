@@ -263,8 +263,8 @@ const Origin: NextPage = () => {
               <h1>ARBI :  Origin Passport</h1>
               {/* Description of your NFT Collection */}
               <div className={styles.description}>
-              <p>Origin Passport is the proof of being an early contributor. 
-                Origin Passport can be staked with ARBI & Unlocked the OG roles.
+              <p>Origin Passport is proof of being an early contributor. Holding an Origin Passport will unlocked OG role & allows holders to get ARBI and other benefits.
+
               </p>
               </div>
               <div className={styles.imageWidth}>
@@ -314,14 +314,10 @@ const Origin: NextPage = () => {
                         >
                         Mint Origin                   
                         </Web3Button>
-                           
-                        
                     )}
                   
                   </div>
-                  
-      </div>
-      
+             </div>     
             </div>
             
           </>
