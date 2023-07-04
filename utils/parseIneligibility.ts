@@ -23,7 +23,7 @@ export function parseIneligibility(
       return `You are eligible`;
     }
 
-    return "not eligible.";
+    return "✅ Claimed.";
   }
 
   return reason;

@@ -20,7 +20,7 @@ import { myNftDropContractAddress } from "../const/Details";
 import Image from "next/image";
 import origin from "../public/Asset/Origin.png";
 import { BsCheckCircleFill, BsFillPatchCheckFill, BsFillInfoCircleFill } from 'react-icons/bs'
-import { FaUnlockAlt } from 'react-icons/fa';
+import { FaUnlockAlt, FaGasPump } from 'react-icons/fa';
 import thirdweb from "../public/Asset/thirdweb.svg";
 import arbitrum from "../public/Asset/arbitrum.svg";
 import arbi from "../public/Asset/arbi.svg";
@@ -192,7 +192,7 @@ const Origin: NextPage = () => {
       const pricePerToken = BigNumber.from(
         activeClaimCondition.data?.currencyMetadata.value || 0
       );
-      return `Eligible `;
+      return `✅Eligible `;
 
     }
     if (claimIneligibilityReasons.data?.length) {
@@ -274,8 +274,8 @@ const Origin: NextPage = () => {
               </div>
               <div className={styles.prices}>
               <p>
-              <BsCheckCircleFill size='15' color='#fff' style={{margin:'-2px', marginRight:'4px'}}/>
-               Collected : <span style={{fontWeight:'bold'}}>{numberClaimed} /{4999}</span>
+              <BsFillInfoCircleFill size='15' color='#fff' style={{margin:'-2px', marginRight:'4px'}}/>
+               Minted : <span style={{fontWeight:'bold'}}>{numberClaimed} /{4999}</span>
                 </p>             
               <p style={{marginLeft:'1.2rem'}}>
               <FaUnlockAlt size='15' color='#fff' style={{margin:'-2px', marginRight:'4px'}}/>   
@@ -284,12 +284,13 @@ const Origin: NextPage = () => {
               </p>
 
               <p style={{marginLeft:'1rem'}}>
-              <BsFillInfoCircleFill size='15' color='#fff' style={{margin:'-2px', marginRight:'4px'}}/>   
+              <BsCheckCircleFill size='15' color='#fff' style={{margin:'-2px', marginRight:'4px'}}/>   
             Status :   
-           <span style={{marginLeft:'2px', fontWeight:'bold'}}>{buttonLoading ? "Not connected" : buttonText}</span>                  
+           <span style={{marginLeft:'2px', fontWeight:'bold'}}>{buttonLoading ? "waiting approval" : buttonText}</span>                  
               </p>
                 </div>
-                
+                <p style={{fontSize:'14px', marginLeft:'1rem'}}><FaGasPump style={{marginBottom:'-2px', marginRight:'6px', letterSpacing:'0.5px'}}/> 
+                      GAS estimate <span style={{fontWeight:'bold'}}> : 0.0003 ETH ( $0.5 )</span></p>
              <div className={styles.grid}>
 
          <div className={styles.mintContainer}>
@@ -304,7 +305,7 @@ const Origin: NextPage = () => {
                           isDisabled={!canClaim || buttonLoading}
                           onError={(err) => {
                             console.error(err);
-                            alert("Failed! not enough ETH amount");
+                            alert("⛔ Failed! not enough ETH amount ⛔");
                           }}
                           onSuccess={() => {
                             setQuantity(1);
@@ -313,10 +314,10 @@ const Origin: NextPage = () => {
                         >
                         Mint Origin                   
                         </Web3Button>
+                           
                         
                     )}
-                     
-                    
+                  
                   </div>
                   
       </div>

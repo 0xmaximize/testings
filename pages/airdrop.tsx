@@ -55,7 +55,7 @@ const Airdrop: NextPage = () => {
               Airdrop
               </p>
               <Link href={"/origin"} legacyBehavior>
-              <p style={{marginRight:'6px', fontSize:'14px'}}>Origin Passport <RiArrowRightLine style={{padding:'1px', marginBottom:'-2px'}}/></p>
+              <p style={{marginRight:'6px', fontSize:'14px', letterSpacing:'0.2px'}}>Get Origin Passport <RiArrowRightLine style={{padding:'1px', marginBottom:'-2px'}}/></p>
              </Link>
               </div>
               <Link href={"https://twitter.com/arbinetwork"} target='_blank'>
@@ -90,8 +90,10 @@ const Airdrop: NextPage = () => {
          </Link>     
          <Spacer y={0.5} />
         <Container>
-          <p style={{fontSize:'14px', letterSpacing:'0.4px'}}>
-            Having an Origin Passport / OG roles allows the holder to earn more ARBI & WARBI than others.
+          <p style={{fontSize:'11px', letterSpacing:'1px'}}>       
+          Airdrop Claims will close on June, 07th 2023 and after 
+          the event is over you can trade your ARBI / wARBI. 
+          Hold an Origin Passport during the event to earn even more rewards. 
           </p>
         </Container>
     
@@ -109,12 +111,12 @@ const Airdrop: NextPage = () => {
                contractAddress={contractAddress}
                onError={(err) => {
                 console.error(err);
-                alert("⛔ Something went wrong, please try again later ⛔");
+                alert("⛔ Failed! not enough ETH amount ⛔");
               }}
               onSuccess={() => {
                 alert("Succesfully claimed 🥳 the airdrop has landed into your wallet");
               }}
-              action={(contract) => contract.erc20.claim(10000)}
+              action={(contract) => contract.erc20.claim(100)}
              >      
            
                         Claim                 
@@ -138,7 +140,7 @@ const Airdrop: NextPage = () => {
       <p> GET 10% BONUS</p>
       </span>
       </div>
-
+    
         </div>
       </main>
    
