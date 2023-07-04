@@ -73,7 +73,7 @@ const Airdrop: NextPage = () => {
          </div>
          </Link>
          
-         <Link href={"https://discord.gg/A6qSJEbsbP"} target='_blank'>
+         <Link href={"https://discord.gg/J9Kf2KaSPV"} target='_blank'>
 
          <div className={styles.cards}>
           Join Discord

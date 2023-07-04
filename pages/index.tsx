@@ -64,7 +64,7 @@ const Home: NextPage = () => {
         </div>
         <div style={{display:'flex', marginTop:'25px'}}>
         
-        <Link href="https://discord.gg/eubQyHyu" target="_blank">
+        <Link href="https://discord.gg/J9Kf2KaSPV" target="_blank">
         <BsDiscord size='25' color='#fff' style={{margin:'25px'}}/>
         </Link>
           <Link href="https://twitter.com/arbinetwork" target="_blank">
